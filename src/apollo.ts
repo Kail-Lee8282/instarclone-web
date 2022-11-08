@@ -38,7 +38,10 @@ export const disableDarkMode = () => {
 
 // 통신 할떄 마다다 token 전송
 const httpLink = createHttpLink({
-  uri: "http://localhost:5000/graphql",
+  uri:
+    process.env.NODE_ENV === "production"
+      ? "https://km-instagram-backend.herokuapp.com/graphql"
+      : "http://localhost:5000/graphql",
 });
 
 const authLink = setContext((_, { headers }) => {

@@ -9,8 +9,8 @@ interface IHome {
 }
 
 export const FEED_QUERY = gql`
-  query SeeFeed {
-    seeFeed {
+  query SeeFeed($offset: Int!) {
+    seeFeed(offset: $offset) {
       ...PhotoFragment
       user {
         userName
@@ -38,9 +38,13 @@ const Container = styled.div`
 
 
 function Home(props: IHome) {
-  const { data } = useQuery(FEED_QUERY);
+  const { data } = useQuery(FEED_QUERY,{
+    variables:{
+      offset:0,
+    }
+  });
   
-  console.log(data);
+  console.log("Home",data);
   return (
     <Container>
       <PageTitle></PageTitle>

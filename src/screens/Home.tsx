@@ -44,7 +44,6 @@ function Home(props: IHome) {
     }
   });
   
-  console.log("Home",data);
   return (
     <Container>
       <PageTitle></PageTitle>

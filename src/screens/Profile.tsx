@@ -1,5 +1,4 @@
-import { useState } from "react";
-import { ApolloCache, gql, MutationHookOptions, useApolloClient, useMutation, useQuery } from "@apollo/client";
+import { gql, useApolloClient, useMutation, useQuery } from "@apollo/client";
 import { faIdBadge } from "@fortawesome/free-regular-svg-icons";
 import { faTableCells, faUserCheck } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -12,7 +11,7 @@ import { PHOTO_FRAGMENT } from "../fragments";
 import { FollowUserMutation, SeeProfileQuery, UnfollowUserMutation } from "../gql/graphql";
 import { userRoutes } from "../routes";
 import PageTitle from "../components/PageTitle";
-import useUser, { ME_QUERY } from "../hooks/useUser";
+import useUser from "../hooks/useUser";
 
 const ProfileInfoContainer = styled.div`
     display: flex;

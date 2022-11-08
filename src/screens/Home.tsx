@@ -3,7 +3,7 @@ import styled from "styled-components";
 import Photo, { IPhoto } from "../components/feed/Photo";
 import PageTitle from "../components/PageTitle";
 import { COMMENT_FRAGMENT, PHOTO_FRAGMENT } from "../fragments";
-import { graphql } from "../gql";
+// import { graphql } from "../gql";
 
 interface IHome {
 }
